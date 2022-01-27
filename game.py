@@ -8,18 +8,22 @@
 #WELCOME MESSAGE
 import os
 
+from dotenv import load_dotenv
+load_dotenv()
+
 PlayerName = os.getenv('Player_Name', default = "Player One")
 
 print("Welcome " + PlayerName + " to my Rock-Paper-Scissors game...")
 
 # ASK FOR USER INPUT
 PlayerOne = input("Please choose either : 'rock', 'paper', or 'scissors': ")
+PlayerOne = PlayerOne.lower()
 
 print("You chose: " + PlayerOne)
 
 # VALIDATIONS
 
-if PlayerOne != ("ROCK" or "Rock" or "rock" or "SCISSCORS" or "Scissors" or "scissors" or "PAPER" or "Paper" or "paper"):
+if PlayerOne != "rock" and PlayerOne != "scissors" and PlayerOne != "paper":
     exit()
 
 # COMPUTER CHOICE
@@ -28,6 +32,8 @@ import random
 PossibleChoices = ("rock", "paper", "scissors")
 ComputerChoice = random.choice(PossibleChoices)
 print("The computer chose: " + ComputerChoice)
+
+
 
 # DETERMINE THE WINNER
 
@@ -57,6 +63,10 @@ print("Thanks for playing. Please play again!")
 def determine_winner (choice_1, choice_2):
     PlayerOne = choice_1
     ComputerChoice = choice_2
+
+determine_winner(PlayerOne, ComputerChoice)
+
+    
     
 
 
