@@ -4,6 +4,9 @@
 #
 #AUTOMATED TESTING (GLOBAL)
 #defines global function with two parameters, player one's input and the computer's choice
+from email.policy import default
+
+
 def determine_winner (PlayerOne, ComputerChoice):
     if PlayerOne == ComputerChoice:
         print("Both players selected " + PlayerOne + ". It's a tie!")
@@ -41,7 +44,7 @@ if __name__ == "__main__":
     load_dotenv()
 
 #gets the environment variable 'Player_Name' and if there isn't one, defaults PlayerName to Player One
-    PlayerName = os.getenv('Player_Name', default = "Player One")
+    PlayerName = os.getenv("Player_Name", default = "Player One")
 
     print("Welcome " + PlayerName + " to my Rock-Paper-Scissors game...")
 
