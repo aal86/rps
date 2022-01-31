@@ -4,8 +4,6 @@
 #
 #AUTOMATED TESTING (GLOBAL)
 #defines global function with two parameters, player one's input and the computer's choice
-from email.policy import default
-
 
 def determine_winner (PlayerOne, ComputerChoice):
     if PlayerOne == ComputerChoice:
@@ -39,8 +37,8 @@ if __name__ == "__main__":
 #WELCOME MESSAGE
 #import os to enable environment variables
     import os
-
     from dotenv import load_dotenv
+
     load_dotenv()
 
 #gets the environment variable 'Player_Name' and if there isn't one, defaults PlayerName to Player One
@@ -61,10 +59,10 @@ if __name__ == "__main__":
         exit()
 
 # COMPUTER CHOICE
-    import random
+    from random import choice
 
     PossibleChoices = ("rock", "paper", "scissors")
-    ComputerChoice = random.choice(PossibleChoices)
+    ComputerChoice = choice(PossibleChoices)
     print("The computer chose: " + ComputerChoice)
 
 # DETERMINE THE WINNER

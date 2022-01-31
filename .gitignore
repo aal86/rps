@@ -6,3 +6,7 @@
 # ignore some specific files that may get generated when running python modules or tests:
 __pycache__
 .pytest-cache
+
+
+
+.env
