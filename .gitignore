@@ -8,5 +8,5 @@ __pycache__
 .pytest-cache
 
 
-
+# ignore the env file because they contain secret variables
 .env

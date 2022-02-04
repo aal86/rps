@@ -49,8 +49,9 @@ Install the package
     ```sh
     pip install python-dotenv
     ```
-Create an .env file and defines the Player_Name variable where the user must input their own name under this file so the game.py file can read it
-    For example: Player_Name = "Abby" defines the environment variable to the name Abby
+Create an .env file and defines the PLAYER_NAME variable where the user must input their own name under this file so the game.py file can read it
+    For example: PLAYER_NAME = "Abby" defines the environment variable to the name Abby
+    if user wants their own name to be displayed, the user must type in their own name to the .env file
 
 Within the requirements.txt must add python-dotenv to allow the environment variables to work
 
@@ -87,6 +88,7 @@ Run the rock paper scissors game:
 ```sh
 python game.py
 ```
+follow the instructions displayed in the terminal and play the game
 
 ## Testing
 

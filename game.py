@@ -42,7 +42,7 @@ if __name__ == "__main__":
     load_dotenv()
 
 #gets the environment variable 'Player_Name' and if there isn't one, defaults PlayerName to Player One
-    PlayerName = os.getenv("Player_Name", default = "Player One")
+    PlayerName = os.getenv("PLAYER_NAME", default = "Player One")
 
     print("Welcome " + PlayerName + " to my Rock-Paper-Scissors game...")
 
